@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><3</title>
+        <script src="https://kit.fontawesome.com/11fad7c8a5.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+            .div{
+                width: 100%;
+                height: 100%;
+            }
+            .div2{
+                width: 100%;
+                height: 250px;
+                background-color: #e2b8ac;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            .musik{
+                width: 300px;
+                height: 420px;
+                border-radius: 24px;
+                background-color: #e2b8ac;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 18px 38px 0 rgba(0, 0, 0, 0.19);
+            }
+            .fotomusik{
+                width: 240px;
+                height: 240px;
+                position: absolute;
+                left: 30px;
+                top: 30px;
+                border-radius: 24px;
+            }
+            .play{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                font-size: 20px;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+                text-align: center;
+                border: none;
+                background-color: #efe6dd;
+            }
+            .play:hover {
+                background-color: #e5d5c6;
+            }
+            .play:active{
+                background-color: #e5d5c6;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+                transform: translateY(4px);
+            }
+            .judullagu{
+                font-size: 18px;
+                color: #000000;
+                font-family: retron2000;
+                text-align: none;
+                font-weight: 900;
+            }
+            .penyanyi{
+                font-family: retron2000;
+                font-size: 15px;
+                position: absolute;
+                top: 570px;
+            }
+            .divin1{
+                width: 80%;
+                height: 70%;
+                position: absolute;
+                left: 10%;
+                top: 15%;
+            }
+            .h{
+                font-family: retron2000;
+                color: #919f89 ;
+                text-align: center;
+                font-size: 75px;
+            }
+            .divputih{
+                width: 100%;
+                height: 600px;
+                position: absolute;
+                background-color: #f1f1f1;
+                left: 0px;
+            }
+            .divp{
+                width: 60%;
+                height: 20%;
+                position: absolute;
+                left: 20%;
+            }
+            .p{
+                font-family: Cursive;
+                color:#98a7ac ;
+                text-align: center;
+                font-size: 25px;
+            }
+            .divgelap{
+                width: 100%;
+                height: 600px;
+                position: absolute;
+                left: 0px;
+                background-color: #cddad8;
+            }
+            .foto{
+                border-radius: 14px;
+                width: 248px;
+                height: 441px;
+                position: absolute;
+                top: 100px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+            }
+            .foto2{
+                border-radius: 14px;
+                width: 248px;
+                height: 441px;
+            }
+            .foto3 {
+                width: 375px;
+                height: 322px;
+                border-radius: 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+                position: absolute;
+                top: 100px;
+            }
+            .foto31{
+                width: 375px;
+                height: 322px;
+                border-radius: 20px;
+            }
+            .lirik{
+                width: 60%;
+                height: 40%;
+                position: absolute;
+            }
+            .paralirik{
+                font-family: cursive;
+                font-size: 25px;
+                text-align: center;
+                color: #919f89;
+            }
+            .judulawal{
+                width: 50%;
+                height: 60%;
+                position: absolute;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <div class="div">
+            <div class="div2">
+                <h1 class="h">Our Love</h1>
+            </div>
+            <div class="divputih" style="top:250px;">
+                <div class="divin1">
+                    <div class="judulawal" style="right: 0; top: 20%;">
+                        <h1 class="h">song <i class="fas fa-heart"></i></h1>
+                    </div>
+                    <div class="musik">
+                        <p class="judullagu" style="position: absolute; top: 260px; left: 40px;">It's you</p>
+                        <p class="penyanyi" style="position: absolute; top: 288px; left: 40px;">Ali gate</p>
+                        <audio id="myAudio" autoplay>
+                            <source id="audioSource" src="https://cdn.discordapp.com/attachments/781732552058732554/901717392747552798/y2meta.com_-_Sezairi_-_Its_You_Official_Music_Video_128_kbps.mp3" type="audio/mpeg">
+                        </audio>
+                        <img class="fotomusik" src="https://media.discordapp.net/attachments/901679715453116427/905034736110538813/879212b0-51cc-4570-86de-d7bbcda855a6.png?width=674&height=675" alt="">
+                        <button id="prev" disabled onclick="prevmusik();" class="play" style="position: absolute; left: 60px; top: 330px;"> <i class="fas fa-backward"></i></button>
+                        <button onclick="playaudio();" class="play" style="position: absolute; left: 130px; top: 330px;"> <i onclick="playfunction(this)" class="fas fa-play"></i></button>
+                        <button id="next" onclick="nextmusik();" class="play" style="position: absolute; left: 200px; top: 330px;"> <i class="fas fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="divgelap" style="top: 850px;">
+                <div class="divp" style="top: 20%;">
+                    <h2 class="h">My Boy <i class="fas fa-heart"></i></h2>
+                </div>
+                <div class="divp" style="top: 60%;">
+                     <P class="p">"hey do you know how much i love you,like u travel to the moon and you come back to earth"</P>
+                </div>
+            </div>
+            <div class="divputih" style="top: 1450px;">
+                <div class="lirik" data-aos="fade-left" style="right: 0; top: 30%;">
+                    <p class="paralirik">
+                        Baby, I just want my love back
+                    </p>
+                </div>
+                <div class="foto" data-aos="fade-right" style="left: 12%;">
+                     <img class="foto2" src="https://cdn.discordapp.com/attachments/901679715453116427/904987597921734686/bfb8b81e-9441-4c6f-90de-abb10e4463c5.png" alt="">
+                </div>
+            </div>
+            <div class="divgelap" style="top: 2050px;">
+                <div class="lirik" data-aos="fade-right" style="left: 0; top: 30%;">
+                    <p class="paralirik">
+                        I'd love to love someone new
+                    </p>
+                </div>
+                <div class="foto" data-aos="fade-left" style="right: 12%;">
+                     <img class="foto2" src="https://cdn.discordapp.com/attachments/901679715453116427/904987617521709096/80be98af-9c73-4322-b9b1-91b91e3815b9.png" alt="">
+                </div>
+            </div>
+            <div class="divputih" style="top: 2650px;">
+                <div class="lirik" data-aos="fade-left" style="right: 0; top: 30%;">
+                    <p class="paralirik">
+                        But I gave it all to you
+                    </p>
+                </div>
+                <div class="foto3" data-aos="fade-right" style="left: 12%;">
+                    <img class="foto31" src="https://cdn.discordapp.com/attachments/901679715453116427/905050718648545300/0dad324c-1998-4190-896d-6bb70450d6b1.png" alt="">
+                </div>
+            </div>
+            <div class="divgelap" style="top: 3250px;">
+                <div class="lirik" data-aos="fade-right" style="left: 0; top: 30%;">
+                    <p class="paralirik">
+                        Honey, I just want my love back
+                    </p>
+                </div>
+                <div class="foto" data-aos="fade-left" style="right: 12%;">
+                    <img class="foto2" src="https://media.discordapp.net/attachments/901679715453116427/905053383566712862/82ca9b9e-0b2c-4a98-8be5-b42f8e334f76.png?width=380&height=675" alt="">
+                </div>
+            </div>
+            <div class="divputih" style="top: 3850px">
+                <div class="lirik" data-aos="fade-left" style="right: 0; top: 30%;">
+                    <p class="paralirik">
+                        If you're not gonna be the one
+                    </p>
+                </div>
+                <div class="foto" data-aos="fade-right" style="left: 12%;">
+                    <img class="foto2" src="https://media.discordapp.net/attachments/901679715453116427/905054349061943326/46f17dde-dee1-47e2-9053-df80efea4a55.png?width=380&height=675" alt=""> 
+                </div>
+            </div>
+            <div class="divgelap" style="top: 4450px;">
+                <div class="lirik" data-aos="fade-right" style="left: 0; top: 30%;">
+                    <p class="paralirik">
+                        At least give me back my love"
+                    </p>
+                </div>
+                <div class="foto" data-aos="fade-left" style="right: 12%;">
+                    <img class="foto2" src="https://media.discordapp.net/attachments/901679715453116427/905056436625760276/f67bd7c9-e0f2-44aa-80c3-7f3100f55e7e.png?width=380&height=675" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                Range:1500,
+                duration:1500,
+            })
+            var musikkeberapa = 0;
+            var listmusik = [{ link: "https://cdn.discordapp.com/attachments/901679715453116427/905089233797144636/y2mate.com_-_Ali_Gatie_Its_You_Official_Lyrics_Video.mp3", nama: "It's You", penyanyi: "Ali gate"}, {link: "https://cdn.discordapp.com/attachments/901679715453116427/905045247036358686/y2mate.com_-_ruth_b_dandelions_lyrics.mp3", nama: " Dandelions", penyanyi: "Ruth B"}, {link: "https://cdn.discordapp.com/attachments/901679715453116427/905049471317074000/y2mate.com_-_Ariana_Grande_needy_Audio.mp3", nama:"needy", penyanyi:"Ariana Grande"}, {link: "https://cdn.discordapp.com/attachments/901679715453116427/905049476127916052/y2mate.com_-_Ariana_Grande_pov_audio.mp3", nama: "POV", penyanyi:"Ariana grande"} ];
+            var x = document.getElementById("myAudio"); 
+            var source = document.getElementById('audioSource');
+
+            function playaudio() {
+                if (x.paused)
+                  x.play();
+                else
+                  x.pause();
+            }
+            function prevmusik(){
+                if (musikkeberapa > 0) {
+                x.pause();
+                musikkeberapa -= 1;
+                document.getElementsByClassName("judullagu")[0].textContent = listmusik[musikkeberapa].nama;
+                document.getElementsByClassName("penyanyi")[0].textContent = listmusik[musikkeberapa].penyanyi;
+                source.src = listmusik[musikkeberapa].link;
+                x.load();
+               }
+            }
+
+            function nextmusik(){
+               if (musikkeberapa < listmusik.length) {
+                x.pause();
+                musikkeberapa += 1;
+                document.getElementsByClassName("judullagu")[0].textContent = listmusik[musikkeberapa].nama;
+                document.getElementsByClassName("penyanyi")[0].textContent = listmusik[musikkeberapa].penyanyi;
+                source.src = listmusik[musikkeberapa].link;
+                x.load();
+               }
+            }
+
+            setInterval(function () {
+                if (musikkeberapa > 0) {
+                    document.getElementById("prev").disabled = false;
+                } else{
+                    document.getElementById("prev").disabled = true;
+                }
+
+                if (musikkeberapa < listmusik.length - 1) {
+                    document.getElementById("next").disabled = false;
+                } else{
+                    document.getElementById("next").disabled = true;
+                }
+            }, 1);
+        </script>
+    </body>
+</html>
